@@ -27,6 +27,6 @@ jobs:
       - name: Deploy to Azure SQL Database
         uses: azure/sql-action@v2.3
         with:
-          connection-string: {% raw %}${{ secrets.SQL_CONNECTION_STRING }}{% endraw %}
+          connection-string: ${{ secrets.SQL_CONNECTION_STRING }}
           path: ./bin/Debug/AdventureWorksDB.dacpac
           action: publish
